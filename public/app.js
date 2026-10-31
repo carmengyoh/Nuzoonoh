@@ -150,11 +150,16 @@ bookScene.addEventListener('pointerleave', () => {
   bookJacket.style.removeProperty('--book-y');
 });
 
-const turnButton = document.querySelector('.book-turn-button');
-turnButton.addEventListener('click', () => {
+
+function turnBook() {
   const turned = bookJacket.classList.toggle('is-turned');
-  turnButton.setAttribute('aria-pressed', String(turned));
-  turnButton.firstChild.textContent = turned ? 'Back to the cover ' : 'Turn the book ';
+  bookJacket.setAttribute('aria-pressed', String(turned));
+  bookJacket.setAttribute('aria-label', turned ? 'Turn back to the book cover' : 'Turn the book to read a quote');
+  document.querySelector('.book-edge-note').textContent = turned ? 'back to the cover ↻' : 'turn to read ↻';
   document.querySelector('.book-back').setAttribute('aria-hidden', String(!turned));
   document.querySelector('.book-front').setAttribute('aria-hidden', String(turned));
+}
+bookJacket.addEventListener('click', turnBook);
+bookJacket.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); turnBook(); }
 });

@@ -529,3 +529,8 @@ body { position: relative; isolation: isolate; }
 .book-turn-button:hover { border-color: var(--red); }
 .book-turn-button:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .book-turner { transition: none; } }
+
+.release-book-scene { position: relative; }
+.release-book { cursor: pointer; outline: none; }
+.release-book:focus-visible { outline: 2px solid var(--red); outline-offset: 7px; }
+.book-edge-note { position: absolute; right: 8px; bottom: 0; color: #827365; font-family: var(--serif); font-style: italic; font-size: 14px; letter-spacing: .025em; pointer-events: none; }
