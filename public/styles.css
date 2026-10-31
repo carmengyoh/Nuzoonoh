@@ -584,3 +584,8 @@ body { position: relative; isolation: isolate; }
 .release-book::after { display: none; }
 .release-book.is-turned { --book-y: -3deg; }
 @media (prefers-reduced-motion: reduce) { .book-front, .release-book.is-turned .book-front { transition: none; } }
+
+.wordmark { display: inline-flex; align-items: baseline; gap: .22em; white-space: nowrap; font-size: 34px; line-height: 1; font-weight: 400; }
+.wordmark-script { font-family: "Allura", cursive; font-size: 1.48em; font-weight: 400; line-height: .9; }
+@media (min-width: 1101px) { .wordmark { font-size: 38px; } }
+@media (max-width: 760px) { .wordmark { font-size: 28px; } }
