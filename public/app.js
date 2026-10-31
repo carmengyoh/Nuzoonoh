@@ -157,8 +157,7 @@ function turnBook() {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reducedMotion) {
     bookTurning = true;
-    bookJacket.classList.add('is-fluttering');
-    setTimeout(() => { bookJacket.classList.remove('is-fluttering'); bookTurning = false; }, 750);
+    setTimeout(() => { bookTurning = false; }, 950);
   }
   const turned = bookJacket.classList.toggle('is-turned');
   bookJacket.setAttribute('aria-pressed', String(turned));

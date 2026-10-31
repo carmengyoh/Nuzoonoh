@@ -573,3 +573,14 @@ body { position: relative; isolation: isolate; }
 }
 .book-front, .book-back { transition: opacity 400ms ease 100ms; }
 .release-book.is-turned .book-front { transition-delay: 100ms; }
+
+/* One hinged leaf turns from right to left around the book spine. */
+.book-turner { overflow: visible; perspective: 1800px; transform-style: preserve-3d; }
+.book-front { position: relative; z-index: 3; transform-origin: left center; transform: rotateY(0deg); opacity: 1; transition: transform 950ms cubic-bezier(.4,0,.2,1); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.book-front::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #0004, transparent 15%); opacity: 0; transition: opacity 950ms ease; }
+.book-back { z-index: 1; transform: none; opacity: 1; transition: none; }
+.release-book.is-turned .book-front { transform: rotateY(-180deg); opacity: 1; transition: transform 950ms cubic-bezier(.4,0,.2,1); pointer-events: none; }
+.release-book.is-turned .book-front::after { opacity: .6; }
+.release-book::after { display: none; }
+.release-book.is-turned { --book-y: -3deg; }
+@media (prefers-reduced-motion: reduce) { .book-front, .release-book.is-turned .book-front { transition: none; } }
