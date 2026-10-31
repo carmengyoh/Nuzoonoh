@@ -13,6 +13,10 @@
     <script src="/app.js" defer></script>
   </head>
   <body>
+    <div class="floating-art" aria-hidden="true">
+      <img class="floating-eye" src="./assets/futility-eye.png" alt="" width="1280" height="1231">
+      <img class="floating-flower" src="./assets/dead-brides-flower.png" alt="" width="1255" height="1241">
+    </div>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="wordmark" href="#home" aria-label="Nuzo Onoh home">NUZO<br>ONOH</a>
@@ -29,20 +33,13 @@
     </header>
 
     <main id="main">
-      <section class="home-feature" id="home" aria-labelledby="hero-title">
-        <div class="hero-copy">
-
-          <h1 id="hero-title"><span class="name-line">NUZO</span><span class="name-line name-line-last">ONOH</span></h1>
-          <p class="hero-tagline" data-content="author.tagline"></p>
-          <p class="hero-bio" data-content="author.biography"></p>
-
-        </div>
+      <section class="home-feature" id="home" aria-labelledby="release-title">
         <section class="featured-release" aria-labelledby="release-title">
           <div class="release-content">
             <img class="featured-cover release-cover-image" src="./assets/the-turning-of-sally-mae.png" alt="The Turning of Sally-Mae by Nuzo Onoh book cover" width="704" height="1080">
             <div class="release-copy">
               <p class="eyebrow" data-content="featuredRelease.label"></p>
-              <h2 id="release-title" data-content="featuredRelease.title"></h2>
+              <h1 id="release-title" data-content="featuredRelease.title"></h1>
               <p class="release-description" data-content="featuredRelease.description"></p>
               <p class="release-meta" data-content="featuredRelease.publication"></p>
               <div class="release-actions">
