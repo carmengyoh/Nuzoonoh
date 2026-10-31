@@ -625,3 +625,5 @@ body { position: relative; isolation: isolate; }
   .wordmark { font-size: 24px; }
   .header-note { padding-left: 9px; font-size: 13px; }
 }
+
+.header-note { color: var(--red); }
