@@ -221,6 +221,7 @@ function openBookWorld(id, trigger) {
   cover.src = world.cover; cover.alt = world.title + ' book cover';
   worldDialog.querySelector('#world-title').textContent = world.title;
   worldDialog.querySelector('.world-subtitle').textContent = world.subtitle;
+  worldDialog.querySelector('.world-summary-copy').textContent = world.summary || 'Story summary coming soon.';
   worldDialog.querySelector('.world-excerpt').textContent = world.excerpt || '';
   worldDialog.querySelector('.world-audio-status').hidden = Boolean(world.audio);
   worldAudio.pause(); worldAudio.removeAttribute('src'); worldAudio.load();
@@ -254,7 +255,7 @@ document.addEventListener('click',(event) => {
 worldDialog.querySelector('.world-close').addEventListener('click',()=>worldDialog.close());
 worldDialog.querySelector('.world-return').addEventListener('click',()=>worldDialog.close());
 worldDialog.querySelector('.world-scroll-hint').addEventListener('click',event=>{
-  event.preventDefault(); worldDialog.querySelector('.world-listening').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  event.preventDefault(); worldDialog.querySelector('.world-summary').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
 });
 worldDialog.addEventListener('close',()=>{
   worldAudio.pause(); document.body.style.overflow = previousBodyOverflow || '';
