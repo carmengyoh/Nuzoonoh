@@ -226,6 +226,7 @@ function openBookWorld(id, trigger) {
   worldDialog.querySelector('.world-audio-status').hidden = Boolean(world.audio);
   worldAudio.pause(); worldAudio.removeAttribute('src'); worldAudio.load();
   worldAudio.hidden = !world.audio;
+  worldDialog.querySelector('.world-audio-credit').hidden = !world.audio;
   worldDialog.querySelector('.world-listen-note').hidden = !world.audio;
   if (world.audio) worldAudio.src = world.audio;
   const review = worldDialog.querySelector('.world-review');
@@ -261,4 +262,5 @@ worldDialog.addEventListener('close',()=>{
   worldAudio.pause(); document.body.style.overflow = previousBodyOverflow || '';
   worldTrigger?.focus({preventScroll:true});
 });
+
 
