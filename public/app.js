@@ -158,7 +158,7 @@ function turnBook() {
   if (!reducedMotion) {
     bookTurning = true;
     bookJacket.classList.add('is-fluttering');
-    setTimeout(() => { bookJacket.classList.remove('is-fluttering'); bookTurning = false; }, 1300);
+    setTimeout(() => { bookJacket.classList.remove('is-fluttering'); bookTurning = false; }, 750);
   }
   const turned = bookJacket.classList.toggle('is-turned');
   bookJacket.setAttribute('aria-pressed', String(turned));
@@ -171,3 +171,4 @@ bookJacket.addEventListener('click', turnBook);
 bookJacket.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); turnBook(); }
 });
+

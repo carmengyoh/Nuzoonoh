@@ -558,3 +558,18 @@ body { position: relative; isolation: isolate; }
   .book-front, .book-back { transition: none; }
   .flutter-page { animation: none !important; }
 }
+
+/* Keep the page movement restrained and entirely inside the jacket. */
+.book-turner { overflow: hidden; }
+.book-edge-note { top: -15px; bottom: auto; right: 16px; font-size: 14px; color: #6f5b4d; }
+.release-book-scene { padding-top: 16px; margin-top: 22px; }
+.flutter-page { inset: 1px 0 1px auto; width: 14%; transform-origin: right center; border-radius: 0; box-shadow: -3px 0 8px #20130d15; }
+.flutter-page::after { display: none; }
+.is-fluttering .flutter-page { animation: subtle-page-ripple 500ms ease-in-out both; animation-delay: calc(var(--page) * 35ms); }
+@keyframes subtle-page-ripple {
+  0%, 100% { opacity: 0; transform: translateX(0) scaleX(.15); }
+  30% { opacity: .36; transform: translateX(-3px) scaleX(.55); }
+  65% { opacity: .2; transform: translateX(-7px) scaleX(.3); }
+}
+.book-front, .book-back { transition: opacity 400ms ease 100ms; }
+.release-book.is-turned .book-front { transition-delay: 100ms; }
