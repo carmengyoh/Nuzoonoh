@@ -383,3 +383,10 @@ blockquote { margin: 0 0 9px; font-size: 19px; font-style: italic; line-height: 
 @media (max-width: 1100px) {
   .release-cover-image { height: auto; width: 100%; }
 }
+
+/* Keep section labels consistent with the author and release labels. */
+.featured-books-heading { font-size: 11px; font-weight: 600; letter-spacing: .28em; line-height: 1.5; }
+.hero-copy h1 { margin-top: 0; }
+@media (max-width: 760px) {
+  .featured-books-heading, .release-copy .eyebrow { font-size: 10px; }
+}
