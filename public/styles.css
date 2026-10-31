@@ -589,3 +589,7 @@ body { position: relative; isolation: isolate; }
 .wordmark-script { font-family: "Allura", cursive; font-size: 1.48em; font-weight: 400; line-height: .9; }
 @media (min-width: 1101px) { .wordmark { font-size: 38px; } }
 @media (max-width: 760px) { .wordmark { font-size: 28px; } }
+
+.header-note { font-size: 20px; line-height: 1.25; }
+@media (min-width: 1101px) { .header-note { font-size: clamp(21px, 1.4vw, 27px); } }
+@media (min-width: 1101px) and (max-width: 1400px) { .header-note { font-size: 21px; } }
