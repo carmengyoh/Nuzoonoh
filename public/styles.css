@@ -744,3 +744,13 @@ body { position: relative; isolation: isolate; }
   .book-carousel .carousel-next { grid-column: 3; grid-row: 1; }
   .book-carousel .featured-book-copy { grid-column: 4; grid-row: 1; padding-block: 16px; }
 }
+
+@media (max-width: 760px) {
+  .books { padding-top: 30px; padding-bottom: 28px; }
+  .featured-books-heading { margin-bottom: 30px; }
+  .book-carousel { min-height: 260px; }
+  .carousel-indicators { margin-top: 22px; }
+}
+@media (max-width: 440px) {
+  .book-carousel { min-height: 390px; }
+}
