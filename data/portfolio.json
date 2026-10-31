@@ -73,6 +73,20 @@
       "title": "Where the Dead Brides Gather",
       "cover": "./assets/dead-brides-cover.png",
       "description": "Step into the world of African horror."
+    },
+    {
+      "id": "unclean",
+      "title": "The Unclean",
+      "cover": "./assets/the-unclean.jpg",
+      "description": "A mother’s grief. A forbidden bargain. A terrible return.",
+      "url": "https://www.amazon.co.uk/Unclean-Nuzo-Onoh/dp/1909484377"
+    },
+    {
+      "id": "sleepless",
+      "title": "The Sleepless",
+      "cover": "./assets/the-sleepless.jpg",
+      "description": "In the shadow of war, the restless dead draw near.",
+      "url": "https://www.amazon.co.uk/Sleepless-Nuzo-Onoh/dp/1909484865"
     }
   ],
   "news": [
@@ -152,6 +166,34 @@
       "audio": "",
       "summary": "Young Bata finds herself protecting her cousin from a murderous ghost on the eve of a wedding. An attempted exorcism sends her into Ibaja-La, a realm inhabited by brides who died before they could marry. Returning with new powers, she must learn to confront its dangerous spirits and protect the people she loves.",
       "summarySource": "https://www.penguinrandomhouse.com/books/763863/where-the-dead-brides-gather-by-nuzo-onoh/"
+    },
+    "unclean": {
+      "title": "The Unclean",
+      "cover": "./assets/the-unclean.jpg",
+      "subtitle": "A novel by Nuzo Onoh",
+      "summary": "After her dead child is left in a feared forest, Desee refuses to accept her loss. Seeking a way to restore his life, she turns to a powerful witch-doctor. Her choices draw her into a dangerous ordeal where love, grief and dark beliefs carry devastating consequences.",
+      "summarySource": "https://www.amazon.co.uk/Unclean-Nuzo-Onoh/dp/1909484377",
+      "background": "#181a13",
+      "glow": "#59603a",
+      "accent": "#d8d4a3",
+      "quote": "",
+      "reviewer": "",
+      "audio": "",
+      "excerpt": ""
+    },
+    "sleepless": {
+      "title": "The Sleepless",
+      "cover": "./assets/the-sleepless.jpg",
+      "subtitle": "A novel by Nuzo Onoh",
+      "summary": "During the Biafran War, young Obele knows a terrible secret about her brother’s death. A mysterious voice and new friends at an abandoned house offer a way through the dangers around her, but their help comes at a cost. As she tries to release her brother’s trapped spirit, Obele faces threats from the living and the dead.",
+      "summarySource": "https://www.amazon.co.uk/Sleepless-Nuzo-Onoh/dp/1909484865",
+      "background": "#171015",
+      "glow": "#6c2535",
+      "accent": "#e9b6bd",
+      "quote": "",
+      "reviewer": "",
+      "audio": "",
+      "excerpt": ""
     }
   }
 }

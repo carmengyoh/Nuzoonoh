@@ -92,7 +92,7 @@ document.querySelector("#signup-form").addEventListener("submit", (event) => {
 
 loadContent();
 function setupBookCarousel(allBooks) {
-  const books = (allBooks || []).slice(0, 3);
+  const books = allBooks || [];
   const carousel = document.querySelector('.book-carousel');
   const stage = document.querySelector('.featured-book-stage');
   const indicators = document.querySelector('.carousel-indicators');
