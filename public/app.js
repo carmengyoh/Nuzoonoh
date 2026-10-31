@@ -212,6 +212,7 @@ function openBookWorld(id, trigger) {
   const world = bookWorlds[id];
   if (!world) return;
   worldTrigger = trigger;
+  worldDialog.dataset.book = id;
   const origin = (trigger.closest('.featured-release')?.querySelector('.release-cover-image') || trigger.closest('.featured-book')?.querySelector('.carousel-cover'))?.getBoundingClientRect();
   worldDialog.style.setProperty('--world-bg',world.background);
   worldDialog.style.setProperty('--world-glow',world.glow);
@@ -229,11 +230,16 @@ function openBookWorld(id, trigger) {
   worldDialog.querySelector('.world-listen-note').hidden = !world.audio;
   if (world.audio) worldAudio.src = world.audio;
   const review = worldDialog.querySelector('.world-review');
-  review.hidden = !world.quote;
-  // Hidden panels must not inherit the flex display used by gallery sections.
-  review.style.display = world.quote ? '' : 'none';
-  worldDialog.querySelector('.world-review-quote').textContent = world.quote ? '“' + world.quote + '”' : '';
-  worldDialog.querySelector('.world-review-source').textContent = world.reviewer || '';
+  const reviews = world.reviews || (world.quote ? [{quote:world.quote,reviewer:world.reviewer}] : []);
+  review.hidden = !reviews.length;
+  review.style.display = reviews.length ? '' : 'none';
+  const testimonials = worldDialog.querySelector('.world-testimonials');
+  testimonials.replaceChildren();
+  reviews.forEach(item => {
+    const card = make('figure','world-testimonial');
+    card.append(make('blockquote','world-review-quote','“' + item.quote + '”'),make('figcaption','world-review-source',item.reviewer));
+    testimonials.append(card);
+  });
   previousBodyOverflow = document.body.style.overflow;
   document.body.style.overflow = 'hidden';
   worldDialog.showModal(); worldScroller.scrollTop = 0;

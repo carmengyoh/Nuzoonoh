@@ -707,3 +707,21 @@ body { position: relative; isolation: isolate; }
 @media (max-width: 700px) {
   .world-panel:not(.world-opening) { min-height: 62dvh; padding-top: 64px; padding-bottom: 64px; }
 }
+
+/* Sally-Mae's silhouettes stay behind the gallery exhibits. */
+.world-snakes { display:none; position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.book-world[data-book="sally-mae"] .world-snakes { display:block; }
+.world-snake { position:absolute; width:clamp(130px,17vw,280px); height:auto; opacity:.32; transform-origin:50% 65%; animation:snake-sway 24s ease-in-out infinite alternate; }
+.snake-one { left:-4%; top:8%; --snake-angle:-20deg; }
+.snake-two { right:-4%; top:35%; --snake-angle:170deg; animation-delay:-12s; animation-duration:32s; }
+.snake-three { left:30%; bottom:-18%; --snake-angle:65deg; opacity:.18; animation-delay:-7s; animation-duration:28s; }
+@keyframes snake-sway {
+ from { transform:translate3d(-8px,-10px,0) rotate(var(--snake-angle)) skewX(-2deg) scaleX(.98); }
+ to { transform:translate3d(12px,14px,0) rotate(calc(var(--snake-angle) + 5deg)) skewX(2deg) scaleX(1.03); }
+}
+.world-testimonials { width:min(850px,100%); display:grid; gap:64px; }
+.world-testimonial { margin:0; }
+.world-testimonials .world-review-quote { font-size:clamp(25px,2.7vw,42px); line-height:1.35; margin:0; }
+.world-testimonials .world-review-source { margin-top:18px; }
+@media (max-width:700px) { .world-snake { opacity:.22; } .world-testimonials { gap:46px; } }
+@media (prefers-reduced-motion:reduce) { .world-snake { animation:none; transform:rotate(var(--snake-angle)); } }

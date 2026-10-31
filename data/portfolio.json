@@ -22,24 +22,20 @@
         "reviewer": "Ramsey Campbell"
       },
       {
-        "quote": "Review 2 coming soon.",
-        "reviewer": "Reviewer to be added"
+        "quote": "A powerful, engrossing, and clever tale of venomous vengeance rich with folkloric tradition",
+        "reviewer": "Kelsea Yu"
       },
       {
-        "quote": "Review 3 coming soon.",
-        "reviewer": "Reviewer to be added"
+        "quote": "A revenge tale that blends African folklore with Nuzo Onoh's signature body horror",
+        "reviewer": "Del Sandeen"
       },
       {
-        "quote": "Review 4 coming soon.",
-        "reviewer": "Reviewer to be added"
+        "quote": "Religious horror, supernatural transformation, and vengeance served up piping hot",
+        "reviewer": "Sadie Hartmann"
       },
       {
-        "quote": "Review 5 coming soon.",
-        "reviewer": "Reviewer to be added"
-      },
-      {
-        "quote": "Review 6 coming soon.",
-        "reviewer": "Reviewer to be added"
+        "quote": "A fiercely original, snake-infused, page-turner",
+        "reviewer": "Tamika Thompson"
       }
     ]
   },
@@ -129,15 +125,37 @@
       "title": "The Turning of Sally-Mae",
       "subtitle": "An African horror novel",
       "cover": "./assets/the-turning-of-sally-mae.png",
-      "background": "#25120e",
-      "glow": "#a14a20",
-      "accent": "#e9bc74",
+      "background": "#191d07",
+      "glow": "#777819",
+      "accent": "#e3df83",
       "quote": "Nuzo Onoh is a true original",
       "reviewer": "Ramsey Campbell",
       "excerpt": "",
       "audio": "",
       "summary": "Sent from Texas to Africa after a devastating assault, Sally-Mae Jenkins carries unborn twins and a fierce desire for revenge. In a village where Amara heals the sick at the cost of her own youth, two powerful deities take an interest in Sally-Mae’s children. As the twins develop terrifying abilities, her search for justice becomes entangled with forces far beyond the human world.",
-      "summarySource": "https://titanbooks.com/72858-the-turning-of-sally-mae/"
+      "summarySource": "https://titanbooks.com/72858-the-turning-of-sally-mae/",
+      "reviews": [
+        {
+          "quote": "Nuzo Onoh is a true original",
+          "reviewer": "Ramsey Campbell"
+        },
+        {
+          "quote": "A powerful, engrossing, and clever tale of venomous vengeance rich with folkloric tradition",
+          "reviewer": "Kelsea Yu"
+        },
+        {
+          "quote": "A revenge tale that blends African folklore with Nuzo Onoh's signature body horror",
+          "reviewer": "Del Sandeen"
+        },
+        {
+          "quote": "Religious horror, supernatural transformation, and vengeance served up piping hot",
+          "reviewer": "Sadie Hartmann"
+        },
+        {
+          "quote": "A fiercely original, snake-infused, page-turner",
+          "reviewer": "Tamika Thompson"
+        }
+      ]
     },
     "futility": {
       "title": "Futility",
