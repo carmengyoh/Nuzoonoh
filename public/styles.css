@@ -496,3 +496,6 @@ body { position: relative; isolation: isolate; }
   .floating-eye { top: 16%; left: 3%; }
   .floating-flower { top: 65%; left: auto; right: 3%; }
 }
+
+.floating-eye { width: clamp(80px, 7.5vw, 138px); }
+.floating-flower { width: clamp(100px, 10vw, 181px); }
