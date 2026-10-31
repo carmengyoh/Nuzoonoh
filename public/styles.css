@@ -471,3 +471,28 @@ body { position: relative; isolation: isolate; }
  .floating-flower { right: -65px; }
 }
 @media (prefers-reduced-motion: reduce) { .floating-art img { animation: none !important; } }
+
+/* Small cover details roam gently across the viewport. */
+.floating-art img { opacity: .16; will-change: transform; }
+.floating-eye { width: clamp(64px, 6vw, 110px); top: 0; left: 0; animation: eye-roam 58s linear infinite !important; }
+.floating-flower { width: clamp(80px, 8vw, 145px); top: 0; left: 0; right: auto; bottom: auto; animation: flower-roam 72s linear infinite !important; }
+@keyframes eye-roam {
+  0%, 100% { transform: translate3d(5vw, 14vh, 0) rotate(-14deg); }
+  20% { transform: translate3d(47vw, 5vh, 0) rotate(12deg); }
+  40% { transform: translate3d(86vw, 32vh, 0) rotate(34deg); }
+  60% { transform: translate3d(66vw, 77vh, 0) rotate(4deg); }
+  80% { transform: translate3d(12vw, 65vh, 0) rotate(-22deg); }
+}
+@keyframes flower-roam {
+  0%, 100% { transform: translate3d(82vw, 65vh, 0) rotate(18deg); }
+  20% { transform: translate3d(54vw, 80vh, 0) rotate(48deg); }
+  40% { transform: translate3d(8vw, 47vh, 0) rotate(85deg); }
+  60% { transform: translate3d(26vw, 7vh, 0) rotate(115deg); }
+  80% { transform: translate3d(75vw, 18vh, 0) rotate(65deg); }
+}
+@media (max-width: 600px) { .floating-art img { opacity: .11; } }
+@media (prefers-reduced-motion: reduce) {
+  .floating-art img { animation: none !important; will-change: auto; }
+  .floating-eye { top: 16%; left: 3%; }
+  .floating-flower { top: 65%; left: auto; right: 3%; }
+}
