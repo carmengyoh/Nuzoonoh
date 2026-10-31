@@ -604,3 +604,5 @@ body { position: relative; isolation: isolate; }
   .site-header { grid-template-columns: 255px 1fr 290px; }
 }
 @media (max-width: 760px) { .wordmark { font-size: 34px; } }
+
+.wordmark-first { font-family: "Allura", cursive; font-size: 1.48em; font-weight: 400; line-height: .9; }
