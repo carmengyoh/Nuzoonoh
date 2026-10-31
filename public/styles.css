@@ -593,3 +593,14 @@ body { position: relative; isolation: isolate; }
 .header-note { font-size: 20px; line-height: 1.25; }
 @media (min-width: 1101px) { .header-note { font-size: clamp(21px, 1.4vw, 27px); } }
 @media (min-width: 1101px) and (max-width: 1400px) { .header-note { font-size: 21px; } }
+
+.wordmark { font-size: 42px; }
+@media (min-width: 1101px) {
+  .wordmark { font-size: 52px; }
+  .site-header { grid-template-columns: 310px 1fr 380px; }
+}
+@media (min-width: 1101px) and (max-width: 1400px) {
+  .wordmark { font-size: 44px; }
+  .site-header { grid-template-columns: 255px 1fr 290px; }
+}
+@media (max-width: 760px) { .wordmark { font-size: 34px; } }
