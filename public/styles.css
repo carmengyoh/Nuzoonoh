@@ -262,3 +262,112 @@ blockquote { margin: 0 0 9px; font-size: 19px; font-style: italic; line-height: 
   .featured-book-copy .eyebrow { font-size: 6px; }
   .featured-book-description { font-size: 12px; }
 }
+
+/* Readable editorial scale across desktop and handheld screens. */
+.site-header, main, .site-footer { width: min(1320px, 100%); }
+.eyebrow { font-size: 11px; }
+.arrow-link { font-size: 11px; letter-spacing: .18em; }
+.button { min-height: 44px; padding: 13px 20px; align-items: center; font-size: 11px; letter-spacing: .16em; }
+@media (min-width: 761px) {
+  body { padding-inline: 40px; }
+  .site-header { min-height: 88px; grid-template-columns: 180px 1fr 290px; }
+  .wordmark { font-size: 30px; }
+  .site-nav { font-size: 16px; }
+  .header-note { font-size: 14px; }
+  .home-feature { min-height: 500px; padding: 48px 16px; gap: 44px; }
+  h1 { font-size: clamp(94px, 8.2vw, 128px); margin-top: 22px; }
+  .hero-tagline { max-width: 440px; font-size: 32px; margin: 20px 0 16px; line-height: 1.1; }
+  .hero-bio { max-width: 460px; font-size: 18px; line-height: 1.45; margin-bottom: 20px; }
+  .featured-release { padding-left: 32px; }
+  .release-content { grid-template-columns: .8fr 1fr; gap: 24px; }
+  .featured-cover { height: 300px; }
+  .release-copy h2 { font-size: 42px; line-height: 1.05; margin-bottom: 14px; }
+  .release-description { font-size: 17px; line-height: 1.4; margin-bottom: 12px; }
+  .release-meta { font-size: 15px; line-height: 1.4; margin-bottom: 18px; }
+  .release-actions { flex-wrap: wrap; gap: 10px; }
+  .release-quote { margin-top: 20px; padding-top: 16px; }
+  .release-quote blockquote { font-size: 18px; }
+  .quote-source { font-size: 10px; }
+  .meet-nuzo { padding: 48px 24px; gap: 56px; }
+  .about-copy h2 { font-size: 52px; margin-bottom: 18px; }
+  .about-copy > p:not(.eyebrow) { max-width: 550px; font-size: 19px; line-height: 1.5; margin-bottom: 18px; }
+  .about-copy .eyebrow { margin-bottom: 20px; }
+  .books { padding: 28px 0 20px; }
+  .featured-books-heading { font-size: 15px; margin-bottom: 28px; }
+  .featured-book { max-width: 850px; grid-template-columns: 190px minmax(0, 1fr); gap: 64px; }
+  .carousel-cover { width: 190px; height: 260px; }
+  .featured-book-copy h3 { font-size: 42px; }
+  .featured-book-description { max-width: 430px; font-size: 19px; line-height: 1.45; margin-bottom: 20px; }
+  .carousel-count { font-size: 12px; }
+  .carousel-arrow { width: 40px; height: 40px; font-size: 24px; }
+  .news { padding: 24px 0 32px; }
+  .section-bar { margin-bottom: 20px; }
+  .section-bar .arrow-link { font-size: 10px; }
+  .news-item { grid-template-columns: 100px 1fr 18px; gap: 16px; padding-right: 20px; }
+  .news-item + .news-item { padding-left: 20px; }
+  .news-image { width: 100px; height: 82px; }
+  .news-copy h3 { font-size: 17px; line-height: 1.3; margin-bottom: 8px; }
+  .news-copy p { font-size: 13px; }
+  .letters { padding: 30px 4px; gap: 44px; }
+  .letters-copy h2 { font-size: 28px; line-height: 1.25; }
+  .signup-controls { height: 46px; }
+  .signup-controls input { font-size: 15px; }
+  .signup-controls button { font-size: 11px; flex-basis: 145px; }
+  .signup-note, .form-status { font-size: 12px; margin-top: 8px; }
+  .site-footer { min-height: 68px; font-size: 12px; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .site-header { grid-template-columns: 140px 1fr; }
+  .header-note { display: none; }
+  .home-feature { grid-template-columns: 1fr; gap: 36px; }
+  .hero-copy { max-width: 650px; }
+  .featured-release { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .release-content { grid-template-columns: 190px 1fr; }
+  .featured-cover { height: 250px; }
+  .meet-nuzo { gap: 32px; padding-inline: 8px; }
+  .news-item { grid-template-columns: 1fr; align-content: start; }
+  .news-image { width: 100%; height: 120px; }
+}
+@media (max-width: 760px) {
+  .home-feature { grid-template-columns: 1fr; gap: 28px; padding-block: 30px; }
+  h1 { max-width: 460px; font-size: clamp(80px, 18vw, 120px); }
+  .hero-copy > .eyebrow { font-size: 10px; }
+  .hero-tagline { font-size: 28px; max-width: 400px; margin: 18px 0 14px; }
+  .hero-bio { max-width: 480px; font-size: 17px; line-height: 1.45; margin-bottom: 18px; }
+  .hero-copy > .arrow-link { font-size: 10px; }
+  .featured-release { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .release-content { grid-template-columns: minmax(95px, .7fr) 1fr; gap: 18px; }
+  .featured-cover { height: 220px; }
+  .release-copy .eyebrow { font-size: 9px; }
+  .release-copy h2 { font-size: 30px; }
+  .release-description { font-size: 15px; line-height: 1.4; }
+  .release-meta { font-size: 13px; margin-bottom: 12px; }
+  .release-quote blockquote { font-size: 16px; }
+  .release-quote .quote-source { font-size: 9px; }
+  .about-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.5; }
+  .about-copy .eyebrow { font-size: 10px; }
+  .featured-book-description { font-size: 16px; line-height: 1.4; }
+  .carousel-count { font-size: 11px; }
+  .news { padding-block: 20px; }
+  .news-grid { grid-template-columns: 1fr; gap: 18px; }
+  .news-item, .news-item + .news-item { grid-template-columns: 90px 1fr; padding: 0; border: 0; gap: 14px; }
+  .news-image { width: 90px; height: 75px; }
+  .news-copy h3 { font-size: 17px; line-height: 1.3; }
+  .news-copy p { font-size: 13px; }
+  .section-bar { margin-bottom: 16px; }
+  .section-bar .arrow-link { font-size: 9px; }
+  .letters-copy h2 { font-size: 25px; line-height: 1.25; }
+  .signup-controls { height: 46px; }
+  .signup-controls input { font-size: 15px; }
+  .signup-controls button { font-size: 10px; }
+  .signup-note, .form-status, .site-footer { font-size: 12px; }
+}
+@media (max-width: 440px) {
+  .book-carousel { grid-template-columns: 26px minmax(0, 1fr) 26px; }
+  .featured-book { grid-template-columns: 1fr; gap: 16px; }
+  .carousel-cover { width: 140px; height: 190px; margin-inline: auto; }
+  .featured-book-copy { padding: 0; text-align: center; }
+  .featured-book-copy h3 { font-size: 30px; }
+  .featured-book-description { font-size: 16px; }
+  .carousel-count { top: 0; right: -4px; }
+}
