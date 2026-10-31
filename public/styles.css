@@ -434,3 +434,7 @@ blockquote { margin: 0 0 9px; font-size: 19px; font-style: italic; line-height: 
   .release-content { gap: 20px; }
   .button { padding-inline: 18px; font-size: 12px; }
 }
+
+@media (min-width: 1101px) {
+  .home-feature { grid-template-columns: .86fr 1.14fr; }
+}
