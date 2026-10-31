@@ -735,3 +735,12 @@ body { position: relative; isolation: isolate; }
 @keyframes world-motif-drift { from { transform:translate3d(-8px,-14px,0) rotate(var(--motif-turn)); } to { transform:translate3d(16px,18px,0) rotate(calc(var(--motif-turn) + 12deg)); } }
 @media (max-width:700px) { .world-book-motif { opacity:.13; } .book-world[data-book="dead-brides"] .world-book-motif { opacity:.12; } }
 @media (prefers-reduced-motion:reduce) { .world-book-motif { animation:none; transform:rotate(var(--motif-turn)); } }
+
+@media (min-width: 441px) and (max-width: 760px) {
+  .book-carousel { position: relative; grid-template-columns: 28px 105px 28px minmax(0, 1fr); gap: 14px; padding-inline: 4px; }
+  .featured-book-stage, .featured-book { display: contents; }
+  .book-carousel .carousel-prev { grid-column: 1; grid-row: 1; }
+  .book-carousel .carousel-cover { grid-column: 2; grid-row: 1; }
+  .book-carousel .carousel-next { grid-column: 3; grid-row: 1; }
+  .book-carousel .featured-book-copy { grid-column: 4; grid-row: 1; padding-block: 16px; }
+}
