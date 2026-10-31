@@ -133,3 +133,19 @@ function setupBookCarousel(allBooks) {
 }
 
 
+
+const bookScene = document.querySelector('.release-book-scene');
+const bookJacket = document.querySelector('.release-book');
+const bookMotionAllowed = matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)');
+bookScene.addEventListener('pointermove', (event) => {
+  if (!bookMotionAllowed.matches) return;
+  const rect = bookScene.getBoundingClientRect();
+  const x = (event.clientX - rect.left) / rect.width - .5;
+  const y = (event.clientY - rect.top) / rect.height - .5;
+  bookJacket.style.setProperty('--book-x', `${-y * 7}deg`);
+  bookJacket.style.setProperty('--book-y', `${x * 12 - 5}deg`);
+});
+bookScene.addEventListener('pointerleave', () => {
+  bookJacket.style.removeProperty('--book-x');
+  bookJacket.style.removeProperty('--book-y');
+});
