@@ -151,7 +151,15 @@ bookScene.addEventListener('pointerleave', () => {
 });
 
 
+let bookTurning = false;
 function turnBook() {
+  if (bookTurning) return;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reducedMotion) {
+    bookTurning = true;
+    bookJacket.classList.add('is-fluttering');
+    setTimeout(() => { bookJacket.classList.remove('is-fluttering'); bookTurning = false; }, 1300);
+  }
   const turned = bookJacket.classList.toggle('is-turned');
   bookJacket.setAttribute('aria-pressed', String(turned));
   bookJacket.setAttribute('aria-label', turned ? 'Turn back to the book cover' : 'Turn the book to read a quote');
