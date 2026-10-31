@@ -44,7 +44,7 @@
               <p class="release-meta" data-content="featuredRelease.publication"></p>
               <div class="release-actions">
                 <a class="button button-dark" href="#books">Buy now <span aria-hidden="true">→</span></a>
-                <a class="button button-outline" href="#books">Read more</a>
+                <button class="button button-outline" type="button" data-book-world="sally-mae">Explore the book</button>
               </div>
             </div>
           </div>
@@ -102,6 +102,28 @@
       <p>© <span data-year></span> Nuzo Onoh</p>
       <p class="footer-contact" data-content="author.email"></p>
     </footer>
+    <dialog class="book-world" aria-labelledby="world-title">
+      <div class="world-atmosphere" aria-hidden="true"></div>
+      <header class="world-header"><span class="world-signature">Nuzo Onoh</span><button class="world-close" type="button" aria-label="Close book gallery">Close <span aria-hidden="true">×</span></button></header>
+      <div class="world-scroll">
+        <section class="world-panel world-opening is-in-view">
+          <div class="world-cover-wrap"><img class="world-cover" alt="" width="704" height="1080"></div>
+          <div class="world-opening-copy"><p class="world-label">Enter the world of</p><h2 id="world-title"></h2><p class="world-subtitle"></p><p class="world-byline">By Nuzo Onoh</p></div>
+          <a class="world-scroll-hint" href="#world-listening">Scroll to discover <span aria-hidden="true">↓</span></a>
+        </section>
+        <section class="world-panel world-listening" id="world-listening" aria-labelledby="world-listening-title">
+          <p class="world-label">Listen closer</p><h3 id="world-listening-title">Let the story find you.</h3>
+          <blockquote class="world-excerpt"></blockquote>
+          <p class="world-audio-status">An audiobook excerpt is coming soon.</p>
+          <audio class="world-audio" controls preload="none" hidden></audio>
+          <p class="world-listen-note" hidden>Press play to listen. The audio pauses as you leave this room.</p>
+        </section>
+        <section class="world-panel world-review" aria-labelledby="world-review-title">
+          <p class="world-label" id="world-review-title">An echo from the readers</p><blockquote class="world-review-quote"></blockquote><p class="world-review-source"></p>
+        </section>
+        <section class="world-panel world-ending"><p class="world-label">The story stays with you</p><h3>There is more beyond<br>the final page.</h3><button class="world-return" type="button">Return to Nuzo’s world <span aria-hidden="true">↗</span></button></section>
+      </div>
+    </dialog>
   </body>
 </html>
 

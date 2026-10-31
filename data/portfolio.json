@@ -57,29 +57,22 @@
   ],
   "books": [
     {
-      "title": "Book title",
-      "year": "",
-      "tone": "red"
+      "id": "sally-mae",
+      "title": "The Turning of Sally-Mae",
+      "cover": "./assets/the-turning-of-sally-mae.png",
+      "description": "An African horror novel by Nuzo Onoh."
     },
     {
-      "title": "Book title",
-      "year": "",
-      "tone": "dark"
+      "id": "futility",
+      "title": "Futility",
+      "cover": "./assets/futility-cover.png",
+      "description": "Murder. Revenge. Soup."
     },
     {
-      "title": "Book title",
-      "year": "",
-      "tone": "charcoal"
-    },
-    {
-      "title": "Book title",
-      "year": "",
-      "tone": "red"
-    },
-    {
-      "title": "Book title",
-      "year": "",
-      "tone": "pale"
+      "id": "dead-brides",
+      "title": "Where the Dead Brides Gather",
+      "cover": "./assets/dead-brides-cover.png",
+      "description": "Step into the world of African horror."
     }
   ],
   "news": [
@@ -116,5 +109,43 @@
   "newsletter": {
     "heading": "Occasional letters on books, writing, folklore and the unseen.",
     "note": "No spam. Just occasional updates."
+  },
+  "bookWorlds": {
+    "sally-mae": {
+      "title": "The Turning of Sally-Mae",
+      "subtitle": "An African horror novel",
+      "cover": "./assets/the-turning-of-sally-mae.png",
+      "background": "#25120e",
+      "glow": "#a14a20",
+      "accent": "#e9bc74",
+      "quote": "Nuzo Onoh is a true original",
+      "reviewer": "Ramsey Campbell",
+      "excerpt": "",
+      "audio": ""
+    },
+    "futility": {
+      "title": "Futility",
+      "subtitle": "Murder. Revenge. Soup.",
+      "cover": "./assets/futility-cover.png",
+      "background": "#062e28",
+      "glow": "#087f68",
+      "accent": "#d3e7be",
+      "quote": "",
+      "reviewer": "",
+      "excerpt": "",
+      "audio": ""
+    },
+    "dead-brides": {
+      "title": "Where the Dead Brides Gather",
+      "subtitle": "A novel by Nuzo Onoh",
+      "cover": "./assets/dead-brides-cover.png",
+      "background": "#071f22",
+      "glow": "#28615a",
+      "accent": "#edb35f",
+      "quote": "",
+      "reviewer": "",
+      "excerpt": "",
+      "audio": ""
+    }
   }
 }

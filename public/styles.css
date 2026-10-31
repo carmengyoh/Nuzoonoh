@@ -631,3 +631,54 @@ body { position: relative; isolation: isolate; }
 .book-back blockquote { margin: 0 0 24px; }
 .review-leaf { position: absolute; inset: 0; z-index: 5; transform-origin: left center; backface-visibility: hidden; -webkit-backface-visibility: hidden; animation: review-page-turn 950ms cubic-bezier(.4,0,.2,1) forwards; }
 @keyframes review-page-turn { from { transform: rotateY(0deg); } to { transform: rotateY(-180deg); } }
+
+/* Immersive book rooms. */
+.book-world { --world-bg:#25120e; --world-glow:#a14a20; --world-accent:#e9bc74; position:fixed; inset:0; margin:0; width:100vw; height:100dvh; max-width:none; max-height:none; border:0; padding:0; color:#f7ecdd; background:var(--world-bg); overflow:hidden; z-index:100; }
+.book-world::backdrop { background:#0c0806ed; }
+.book-world[open] { animation: world-arrive 650ms ease both; }
+.world-atmosphere { position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 24% 32%,var(--world-glow),transparent 64%); opacity:.5; }
+.world-header { position:absolute; inset:0 0 auto; z-index:5; display:flex; justify-content:space-between; align-items:center; padding:24px 4vw; background:linear-gradient(var(--world-bg),transparent); }
+.world-signature { font-family:"Allura",cursive; font-size:38px; }
+.world-close, .world-return { color:inherit; background:transparent; border:1px solid #f7ecdd50; padding:13px 20px; cursor:pointer; font-family:var(--sans); font-size:12px; letter-spacing:.12em; }
+.world-close { display:flex; align-items:center; gap:20px; }
+.world-close span { font-size:24px; line-height:1; }
+.world-scroll { position:relative; height:100%; overflow-y:auto; overscroll-behavior:contain; scroll-behavior:smooth; }
+.world-panel { position:relative; min-height:100dvh; padding:140px max(7vw,24px) 100px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; opacity:.12; transform:translateY(28px); transition:opacity 900ms ease,transform 900ms ease; }
+.world-panel.is-in-view { opacity:1; transform:none; }
+.world-opening { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1fr); gap:8vw; text-align:left; padding-inline:max(12vw,24px); }
+.world-cover-wrap { perspective:1400px; }
+.world-cover { display:block; width:100%; max-height:65dvh; object-fit:contain; filter:drop-shadow(20px 28px 30px #0008); transform:rotateY(-6deg); }
+.world-label { color:var(--world-accent); font-family:var(--sans); font-size:11px; letter-spacing:.25em; text-transform:uppercase; margin:0 0 28px; }
+.world-opening h2 { font-size:clamp(42px,5.4vw,92px); font-weight:400; line-height:1.03; letter-spacing:-.03em; margin:0 0 28px; }
+.world-subtitle { font-size:clamp(20px,2vw,30px); font-style:italic; line-height:1.35; }
+.world-byline { font-family:var(--sans); font-size:12px; letter-spacing:.18em; text-transform:uppercase; opacity:.65; }
+.world-scroll-hint { position:absolute; bottom:30px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; gap:12px; align-items:center; font-family:var(--sans); font-size:10px; letter-spacing:.18em; text-transform:uppercase; white-space:nowrap; }
+.world-scroll-hint span { font-size:24px; }
+.world-panel h3 { font-size:clamp(34px,4vw,64px); font-weight:400; line-height:1.15; margin:0 0 32px; }
+.world-excerpt { font-size:clamp(22px,2.5vw,36px); max-width:800px; line-height:1.6; margin-bottom:38px; }
+.world-excerpt:empty { display:none; }
+.world-audio-status { font-size:20px; color:#f7ecdd99; font-style:italic; }
+.world-audio { width:min(480px,100%); margin-top:20px; }
+.world-listen-note { max-width:420px; font-size:14px; opacity:.65; margin-top:20px; }
+.world-review-quote { max-width:900px; font-size:clamp(34px,4.7vw,76px); line-height:1.25; font-style:italic; }
+.world-review-source { margin-top:28px; color:var(--world-accent); font-family:var(--sans); font-size:12px; letter-spacing:.2em; text-transform:uppercase; }
+.world-ending .world-return { margin-top:15px; }
+.world-close:hover,.world-return:hover { border-color:var(--world-accent); color:var(--world-accent); }
+.world-close:focus-visible,.world-return:focus-visible,.world-scroll-hint:focus-visible { outline:2px solid var(--world-accent); outline-offset:5px; }
+.carousel-cover { object-fit:contain; }
+@keyframes world-arrive { from { opacity:0; } to { opacity:1; } }
+@media (max-width:700px) {
+ .world-header { padding:16px 20px; }
+ .world-signature { font-size:32px; }
+ .world-opening { display:flex; padding-top:110px; gap:32px; text-align:center; padding-bottom:100px; }
+ .world-cover { max-height:43dvh; width:auto; max-width:80vw; }
+ .world-opening h2 { font-size:40px; margin-bottom:16px; }
+ .world-label { margin-bottom:18px; }
+ .world-subtitle { font-size:21px; }
+ .world-panel { min-height:100dvh; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .book-world[open] { animation:none; }
+ .world-panel { transform:none; transition:none; opacity:1; }
+ .world-scroll { scroll-behavior:auto; }
+}
