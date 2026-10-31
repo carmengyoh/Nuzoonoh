@@ -1,3 +1,4 @@
+let bookReviews = [];
 const text = (element, value) => {
   if (element && value != null) element.textContent = value;
 };
@@ -49,6 +50,7 @@ async function loadContent() {
     const response = await fetch("/api/content");
     if (!response.ok) throw new Error("Content request failed");
     const content = await response.json();
+    bookReviews = content.featuredRelease.reviews || [];
 
     document.querySelectorAll("[data-content]").forEach((element) => {
       const value = element.dataset.content.split(".").reduce((current, key) => current?.[key], content);
@@ -151,24 +153,40 @@ bookScene.addEventListener('pointerleave', () => {
 });
 
 
+
 let bookTurning = false;
+let reviewPage = -1;
+const reviewBack = document.querySelector('.book-back');
 function turnBook() {
-  if (bookTurning) return;
+  if (bookTurning || !bookReviews.length) return;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const next = reviewPage + 1 >= bookReviews.length ? -1 : reviewPage + 1;
+  let leaf;
+  if (reviewPage >= 0 && next >= 0 && !reducedMotion) {
+    leaf = reviewBack.cloneNode(true);
+    leaf.classList.add('review-leaf');
+    leaf.setAttribute('aria-hidden', 'true');
+    document.querySelector('.book-turner').append(leaf);
+  }
+  if (next >= 0) {
+    reviewBack.querySelector('blockquote').textContent = '“' + bookReviews[next].quote + '”';
+    reviewBack.querySelector('.book-quote-source').textContent = bookReviews[next].reviewer;
+  }
+  reviewPage = next;
+  const open = reviewPage >= 0;
+  bookJacket.classList.toggle('is-turned', open);
+  bookJacket.setAttribute('aria-pressed', String(open));
+  const hint = !open ? 'turn to read reviews' : reviewPage === bookReviews.length - 1 ? 'back to the cover' : 'turn page';
+  document.querySelector('.book-edge-note').textContent = hint + ' ↻';
+  bookJacket.setAttribute('aria-label', open ? 'Review ' + (reviewPage + 1) + ' of ' + bookReviews.length + '. ' + hint : 'Turn the book to read reviews');
+  reviewBack.setAttribute('aria-hidden', String(!open));
+  document.querySelector('.book-front').setAttribute('aria-hidden', String(open));
   if (!reducedMotion) {
     bookTurning = true;
-    setTimeout(() => { bookTurning = false; }, 950);
+    setTimeout(() => { leaf?.remove(); bookTurning = false; }, 950);
   }
-  const turned = bookJacket.classList.toggle('is-turned');
-  bookJacket.setAttribute('aria-pressed', String(turned));
-  bookJacket.setAttribute('aria-label', turned ? 'Turn back to the book cover' : 'Turn the book to read a quote');
-  document.querySelector('.book-edge-note').textContent = turned ? 'back to the cover ↻' : 'turn to read reviews ↻';
-  document.querySelector('.book-back').setAttribute('aria-hidden', String(!turned));
-  document.querySelector('.book-front').setAttribute('aria-hidden', String(turned));
 }
 bookJacket.addEventListener('click', turnBook);
 bookJacket.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); turnBook(); }
 });
-
-

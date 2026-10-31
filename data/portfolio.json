@@ -15,7 +15,33 @@
     "description": "A short description of the latest release will go here.",
     "publication": "Publication details coming soon",
     "reviewQuote": "Add a review quote here.",
-    "reviewSource": "Review source"
+    "reviewSource": "Review source",
+    "reviews": [
+      {
+        "quote": "Nuzo Onoh is a true original",
+        "reviewer": "Ramsey Campbell"
+      },
+      {
+        "quote": "Review 2 coming soon.",
+        "reviewer": "Reviewer to be added"
+      },
+      {
+        "quote": "Review 3 coming soon.",
+        "reviewer": "Reviewer to be added"
+      },
+      {
+        "quote": "Review 4 coming soon.",
+        "reviewer": "Reviewer to be added"
+      },
+      {
+        "quote": "Review 5 coming soon.",
+        "reviewer": "Reviewer to be added"
+      },
+      {
+        "quote": "Review 6 coming soon.",
+        "reviewer": "Reviewer to be added"
+      }
+    ]
   },
   "upcoming": [
     {
