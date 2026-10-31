@@ -513,3 +513,19 @@ body { position: relative; isolation: isolate; }
 .release-book-scene:focus-within .release-book { transform: rotateY(-3deg); }
 @media (max-width: 600px) { .release-book-scene { width: min(290px, 85%); } }
 @media (prefers-reduced-motion: reduce) { .release-book { transform: none; transition: none; } }
+
+.book-turner { display: grid; transform-style: preserve-3d; transition: transform 1100ms cubic-bezier(.22,.7,.18,1); }
+.book-front, .book-back { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.book-front { transform: translateZ(1px); }
+.book-back { transform: rotateY(180deg) translateZ(1px); background: radial-gradient(ellipse at top, #75351f, #281510 72%); color: #f7edd6; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 32px 24px; border: 1px solid #b67e4960; }
+.book-back .eyebrow { color: #dfb88d; font-size: 10px; }
+.book-back blockquote { font-size: clamp(24px, 2.3vw, 38px); line-height: 1.2; font-style: italic; margin: 24px 0; }
+.book-quote-source { font-family: var(--sans); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+.book-back-ornament { color: #d2a15d; font-size: 24px; margin: 24px 0; }
+.book-back-title { font-size: 21px; line-height: 1.2; margin: 0; }
+.release-book.is-turned .book-turner { transform: rotateY(-180deg); }
+.book-turn-button { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 24px auto 0; padding: 10px 16px; min-height: 44px; color: var(--red); background: transparent; border: 1px solid var(--rule); cursor: pointer; font-family: var(--sans); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.book-turn-button span { font-size: 21px; }
+.book-turn-button:hover { border-color: var(--red); }
+.book-turn-button:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .book-turner { transition: none; } }

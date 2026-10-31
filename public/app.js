@@ -149,3 +149,12 @@ bookScene.addEventListener('pointerleave', () => {
   bookJacket.style.removeProperty('--book-x');
   bookJacket.style.removeProperty('--book-y');
 });
+
+const turnButton = document.querySelector('.book-turn-button');
+turnButton.addEventListener('click', () => {
+  const turned = bookJacket.classList.toggle('is-turned');
+  turnButton.setAttribute('aria-pressed', String(turned));
+  turnButton.firstChild.textContent = turned ? 'Back to the cover ' : 'Turn the book ';
+  document.querySelector('.book-back').setAttribute('aria-hidden', String(!turned));
+  document.querySelector('.book-front').setAttribute('aria-hidden', String(turned));
+});
