@@ -371,3 +371,15 @@ blockquote { margin: 0 0 9px; font-size: 19px; font-style: italic; line-height: 
   .featured-book-description { font-size: 16px; }
   .carousel-count { top: 0; right: -4px; }
 }
+
+/* Show the complete supplied cover, aligned with the hero biography. */
+.release-cover-image { display: block; width: 100%; height: auto; object-fit: contain; }
+@media (min-width: 1101px) {
+  .home-feature { align-items: start; }
+  .featured-release { align-self: start; margin-top: var(--cover-offset, 40px); }
+  .release-content { grid-template-columns: auto minmax(0, 1fr); align-items: center; }
+  .release-cover-image { height: var(--cover-height, 380px); width: auto; max-width: 100%; }
+}
+@media (max-width: 1100px) {
+  .release-cover-image { height: auto; width: 100%; }
+}

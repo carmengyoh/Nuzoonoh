@@ -132,3 +132,16 @@ function setupBookCarousel(allBooks) {
   show(0);
 }
 
+
+// Keep the desktop cover aligned from the author name to the end of her introduction.
+const heroCopy = document.querySelector('.hero-copy');
+function alignReleaseCover() {
+  const title = document.querySelector('#hero-title').getBoundingClientRect();
+  const biography = document.querySelector('.hero-bio').getBoundingClientRect();
+  const copy = heroCopy.getBoundingClientRect();
+  const feature = document.querySelector('.home-feature');
+  feature.style.setProperty('--cover-height', `${biography.bottom - title.top}px`);
+  feature.style.setProperty('--cover-offset', `${title.top - copy.top}px`);
+}
+new ResizeObserver(alignReleaseCover).observe(heroCopy);
+document.fonts.ready.then(alignReleaseCover);
