@@ -162,7 +162,7 @@ function turnBook() {
   const turned = bookJacket.classList.toggle('is-turned');
   bookJacket.setAttribute('aria-pressed', String(turned));
   bookJacket.setAttribute('aria-label', turned ? 'Turn back to the book cover' : 'Turn the book to read a quote');
-  document.querySelector('.book-edge-note').textContent = turned ? 'back to the cover ↻' : 'turn to read ↻';
+  document.querySelector('.book-edge-note').textContent = turned ? 'back to the cover ↻' : 'turn to read reviews ↻';
   document.querySelector('.book-back').setAttribute('aria-hidden', String(!turned));
   document.querySelector('.book-front').setAttribute('aria-hidden', String(turned));
 }
@@ -170,4 +170,5 @@ bookJacket.addEventListener('click', turnBook);
 bookJacket.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); turnBook(); }
 });
+
 
