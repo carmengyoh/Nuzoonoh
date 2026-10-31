@@ -725,3 +725,13 @@ body { position: relative; isolation: isolate; }
 .world-testimonials .world-review-source { margin-top:18px; }
 @media (max-width:700px) { .world-snake { opacity:.22; } .world-testimonials { gap:46px; } }
 @media (prefers-reduced-motion:reduce) { .world-snake { animation:none; transform:rotate(var(--snake-angle)); } }
+
+.world-book-motifs { display:none; position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.book-world[data-book="futility"] .world-book-motifs, .book-world[data-book="dead-brides"] .world-book-motifs { display:block; }
+.world-book-motif { position:absolute; width:clamp(100px,14vw,220px); height:auto; opacity:.18; animation:world-motif-drift 30s ease-in-out infinite alternate; }
+.motif-one { left:-3%; top:18%; --motif-turn:-15deg; }
+.motif-two { right:-3%; bottom:12%; --motif-turn:25deg; animation-delay:-15s; animation-duration:38s; }
+.book-world[data-book="dead-brides"] .world-book-motif { width:clamp(140px,20vw,320px); opacity:.16; }
+@keyframes world-motif-drift { from { transform:translate3d(-8px,-14px,0) rotate(var(--motif-turn)); } to { transform:translate3d(16px,18px,0) rotate(calc(var(--motif-turn) + 12deg)); } }
+@media (max-width:700px) { .world-book-motif { opacity:.13; } .book-world[data-book="dead-brides"] .world-book-motif { opacity:.12; } }
+@media (prefers-reduced-motion:reduce) { .world-book-motif { animation:none; transform:rotate(var(--motif-turn)); } }

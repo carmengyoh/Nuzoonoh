@@ -213,6 +213,11 @@ function openBookWorld(id, trigger) {
   if (!world) return;
   worldTrigger = trigger;
   worldDialog.dataset.book = id;
+  const motif = id === 'futility' ? './assets/futility-eye.png' : id === 'dead-brides' ? './assets/dead-brides-flower.png' : '';
+  worldDialog.querySelectorAll('.world-book-motif').forEach(image => {
+    if (motif) image.src = motif;
+    else image.removeAttribute('src');
+  });
   const origin = (trigger.closest('.featured-release')?.querySelector('.release-cover-image') || trigger.closest('.featured-book')?.querySelector('.carousel-cover'))?.getBoundingClientRect();
   worldDialog.style.setProperty('--world-bg',world.background);
   worldDialog.style.setProperty('--world-glow',world.glow);
@@ -281,3 +286,4 @@ function updateCoverReviewHint() {
 }
 updateCoverReviewHint();
 matchMedia('(hover: none), (pointer: coarse)').addEventListener('change', updateCoverReviewHint);
+
