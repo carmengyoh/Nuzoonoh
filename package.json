@@ -1,0 +1,13 @@
+{
+  "name": "author-portfolio-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend API for an author's portfolio site",
+  "scripts": {
+    "start": "node src/server.js",
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

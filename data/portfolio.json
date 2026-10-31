@@ -1,0 +1,45 @@
+{
+  "author": {
+    "name": "Nuzo Onoh",
+    "descriptor": "Writer · Storyteller · The Supernatural",
+    "eyebrow": "Queen of African Horror",
+    "tagline": "Stories from the edges of the world.",
+    "biography": "Award-winning author of supernatural fiction, pioneering African horror. Nuzo Onoh's work explores folklore, deities, the unseen and what haunts us.",
+    "reviewQuote": "A vital voice in contemporary horror.",
+    "reviewSource": "Review quote placeholder",
+    "email": "Contact details coming soon"
+  },
+  "featuredRelease": {
+    "label": "Latest release",
+    "title": "Book title to come",
+    "description": "A short description of the latest release will go here.",
+    "publication": "Publication details coming soon",
+    "reviewQuote": "Add a review quote here.",
+    "reviewSource": "Review source"
+  },
+  "upcoming": [
+    { "title": "Collection title to come", "type": "Short story collection", "details": "Details coming soon" },
+    { "title": "Novel title to come", "type": "Novel", "details": "Details coming soon" }
+  ],
+  "books": [
+    { "title": "Book title", "year": "", "tone": "red" },
+    { "title": "Book title", "year": "", "tone": "dark" },
+    { "title": "Book title", "year": "", "tone": "charcoal" },
+    { "title": "Book title", "year": "", "tone": "red" },
+    { "title": "Book title", "year": "", "tone": "pale" }
+  ],
+  "news": [
+    { "title": "News headline placeholder", "source": "Publication · Date", "kind": "portrait" },
+    { "title": "Book news placeholder", "source": "Publisher · Date", "kind": "books" },
+    { "title": "Event news placeholder", "source": "Venue · Date", "kind": "mic" }
+  ],
+  "recognition": {
+    "award": "Award details to come",
+    "quotes": ["Add a recognition quote here.", "Add another recognition quote here."],
+    "links": ["Interviews", "Features", "Festivals", "Speaking", "Academic writing"]
+  },
+  "newsletter": {
+    "heading": "Occasional letters on books, writing, folklore and the unseen.",
+    "note": "No spam. Just occasional updates."
+  }
+}

@@ -1,0 +1,13 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.join(__dirname, '..');
+const output = path.join(root, 'dist');
+fs.mkdirSync(output, { recursive: true });
+fs.cpSync(path.join(root, 'public'), output, { recursive: true });
+fs.copyFileSync(path.join(root, 'data', 'portfolio.json'), path.join(output, 'content.json'));
+const htmlPath = path.join(output, 'index.html');
+fs.writeFileSync(htmlPath, fs.readFileSync(htmlPath, 'utf8').replace('href="/styles.css"', 'href="./styles.css"').replace('src="/app.js"', 'src="./app.js"'));
+const appPath = path.join(output, 'app.js');
+fs.writeFileSync(appPath, fs.readFileSync(appPath, 'utf8').replace('fetch("/api/content")', 'fetch("./content.json")'));
+fs.writeFileSync(path.join(output, '.nojekyll'), '');
+console.log('Static site built in dist/');

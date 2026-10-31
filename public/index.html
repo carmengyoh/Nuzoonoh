@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ed">
+    <meta name="description" content="Stories from the edges of the world. Author Nuzo Onoh.">
+    <title>Nuzo Onoh | Author</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Nuzo Onoh home">NUZO<br>ONOH</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#books">Books</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="header-note" data-content="author.descriptor"></p>
+    </header>
+
+    <main id="main">
+      <section class="home-feature" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-content="author.eyebrow"></p>
+          <h1 id="hero-title"><span class="name-line">NUZO</span><span class="name-line name-line-last">ONOH</span></h1>
+          <p class="hero-tagline" data-content="author.tagline"></p>
+          <p class="hero-bio" data-content="author.biography"></p>
+          <a class="arrow-link" href="#books">Explore the books <span aria-hidden="true">→</span></a>
+        </div>
+        <section class="featured-release" aria-labelledby="release-title">
+          <div class="release-content">
+            <div class="cover-placeholder featured-cover" role="img" aria-label="Placeholder for the latest book cover"><span>Cover image<br>coming soon</span></div>
+            <div class="release-copy">
+              <p class="eyebrow" data-content="featuredRelease.label"></p>
+              <h2 id="release-title" data-content="featuredRelease.title"></h2>
+              <p class="release-description" data-content="featuredRelease.description"></p>
+              <p class="release-meta" data-content="featuredRelease.publication"></p>
+              <div class="release-actions">
+                <a class="button button-dark" href="#books">Buy now <span aria-hidden="true">→</span></a>
+                <a class="button button-outline" href="#books">Read more</a>
+              </div>
+            </div>
+          </div>
+          <aside class="release-quote" aria-label="Review quote">
+            <blockquote data-content="featuredRelease.reviewQuote"></blockquote>
+            <p class="quote-source" data-content="featuredRelease.reviewSource"></p>
+          </aside>
+        </section>
+      </section>
+
+      <section class="meet-nuzo ruled" id="about" aria-labelledby="about-title">
+        <img class="author-portrait" src="https://drsw10gc90t0z.cloudfront.net/AcuCustom/Sitename/DAM/548/Untitled_design_45.jpg" alt="Nuzo Onoh" width="440" height="350">
+        <div class="about-copy">
+          <p class="eyebrow">About the author</p>
+          <h2 id="about-title">Meet Nuzo.</h2>
+          <p>A pioneering voice in African horror, Nuzo Onoh draws on folklore, ancestral memory and the supernatural to tell stories that linger long after the final page.</p>
+          <p>Recipient of the Bram Stoker Award for Lifetime Achievement, her work has been published internationally and continues to push the boundaries of contemporary horror.</p>
+          <a class="button button-dark about-button" href="https://www.simonandschuster.com/authors/Nuzo-Onoh/216920687">Discover more</a>
+        </div>
+      </section>
+
+      <section class="books ruled" id="books" aria-labelledby="books-title" aria-roledescription="carousel">
+        <h2 class="eyebrow featured-books-heading" id="books-title">Featured Books</h2>
+        <div class="book-carousel" tabindex="0" aria-label="Featured books, use left and right arrow keys">
+          <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous book">←</button>
+          <div class="featured-book-stage" aria-live="polite" aria-atomic="true"></div>
+          <button class="carousel-arrow carousel-next" type="button" aria-label="Next book">→</button>
+        </div>
+        <div class="carousel-indicators" aria-label="Choose a featured book"></div>
+      </section>
+
+      <section class="news ruled" id="news" aria-labelledby="news-title">
+        <div class="section-bar"><h2 class="eyebrow" id="news-title">News</h2><a class="arrow-link" href="#news">View all news <span aria-hidden="true">→</span></a></div>
+        <div class="news-grid" data-list="news"></div>
+      </section>
+
+<section class="letters ruled" id="contact" aria-labelledby="letters-title">
+        <div class="letters-copy">
+          <p class="eyebrow">Letters from Nuzo</p>
+          <h2 id="letters-title" data-content="newsletter.heading"></h2>
+        </div>
+        <form class="signup-form" id="signup-form">
+          <div class="signup-controls">
+            <label class="visually-hidden" for="email">Your email address</label>
+            <input id="email" name="email" type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+          </div>
+          <p class="signup-note" data-content="newsletter.note"></p>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year></span> Nuzo Onoh</p>
+      <p class="footer-contact" data-content="author.email"></p>
+    </footer>
+  </body>
+</html>
+
+

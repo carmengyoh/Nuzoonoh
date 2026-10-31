@@ -1,0 +1,1 @@
+Add book covers and news images here when the final assets are ready. The current homepage uses CSS placeholders; no placeholder art is being treated as final cover artwork.
