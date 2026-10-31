@@ -123,8 +123,7 @@ function setupBookCarousel(allBooks) {
     link.dataset.bookWorld = book.id;
 
     copy.append(link);
-    const count = make('span', 'carousel-count', String(current + 1).padStart(2, '0') + ' / ' + String(books.length).padStart(2, '0'));
-    article.append(cover, copy, count);
+    article.append(cover, copy);
     stage.replaceChildren(article);
     dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === current)));
   }
@@ -262,5 +261,6 @@ worldDialog.addEventListener('close',()=>{
   worldAudio.pause(); document.body.style.overflow = previousBodyOverflow || '';
   worldTrigger?.focus({preventScroll:true});
 });
+
 
 
