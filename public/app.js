@@ -179,7 +179,7 @@ function turnBook() {
   const open = reviewPage >= 0;
   bookJacket.classList.toggle('is-turned', open);
   bookJacket.setAttribute('aria-pressed', String(open));
-  const hint = !open ? 'turn to read reviews' : reviewPage === bookReviews.length - 1 ? 'back to the cover' : 'turn page';
+  const hint = !open ? coverReviewHint() : reviewPage === bookReviews.length - 1 ? 'back to the cover' : 'turn page';
   document.querySelector('.book-edge-note').textContent = hint + ' ↻';
   bookJacket.setAttribute('aria-label', open ? 'Review ' + (reviewPage + 1) + ' of ' + bookReviews.length + '. ' + hint : 'Turn the book to read reviews');
   reviewBack.setAttribute('aria-hidden', String(!open));
@@ -264,3 +264,14 @@ worldDialog.addEventListener('close',()=>{
 
 
 
+
+function coverReviewHint() {
+  return matchMedia('(hover: none), (pointer: coarse)').matches
+    ? 'tap cover to read reviews'
+    : 'click cover to read reviews';
+}
+function updateCoverReviewHint() {
+  if (reviewPage === -1) document.querySelector('.book-edge-note').textContent = coverReviewHint() + ' ↻';
+}
+updateCoverReviewHint();
+matchMedia('(hover: none), (pointer: coarse)').addEventListener('change', updateCoverReviewHint);
