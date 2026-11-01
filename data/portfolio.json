@@ -248,9 +248,13 @@
       "quote": "",
       "reviewer": "",
       "excerpt": "",
-      "audio": "",
+      "audio": "./assets/audio/futility-excerpt.mp3",
       "summary": "In Abuja, two women’s betrayals draw the attention of a spirit offering revenge. Chia’s celebrated restaurant conceals a disturbing secret behind its irresistible pepper soup. When Claire, a British woman consumed by jealousy, spends an evening there, her carefully managed life begins to unravel. Their stories collide in a darkly comic tale of vengeance, deception and exchanged identities.",
-      "summarySource": "https://titanbooks.com/72646-futility/"
+      "summarySource": "https://titanbooks.com/72646-futility/",
+      "audioStart": 549,
+      "listeningTitle": "“With another loud curse…”",
+      "audiobookUrl": "https://www.audible.co.uk/pd/Futility-Audiobook/B0FSGWP3X1",
+      "audioCredit": "Narrated by Délé Ogundiran"
     },
     "dead-brides": {
       "title": "Where the Dead Brides Gather",
