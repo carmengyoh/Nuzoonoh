@@ -837,3 +837,21 @@ body { position: relative; isolation: isolate; }
 
 .release-meta { color: var(--red); font-weight: 600; font-style: italic; }
 .world-publication { margin: 20px 0 0; color: var(--world-accent); font-size: clamp(15px, 1.25vw, 19px); line-height: 1.5; font-style: italic; }
+
+/* All five slides share one stable, centred frame. */
+@media (min-width: 761px) {
+  .book-carousel { width: min(100%, 850px); grid-template-columns: 44px 190px 44px minmax(0,1fr); min-height: 330px; }
+  .book-carousel .featured-book-copy { width: 100%; max-width: none; min-height: 310px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+}
+@media (min-width: 1101px) {
+  .book-carousel { width: min(100%, 932px); grid-template-columns: 44px 240px 44px minmax(0,1fr); min-height: 390px; }
+  .book-carousel .featured-book-copy { min-height: 370px; }
+}
+@media (min-width: 441px) and (max-width: 760px) {
+  .book-carousel { width: min(100%, 680px); grid-template-columns: 28px 105px 28px minmax(0,1fr); min-height: 280px; }
+  .book-carousel .featured-book-copy { width: 100%; max-width: none; min-height: 250px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+}
+@media (max-width: 440px) {
+  .book-carousel { min-height: 470px; }
+  .featured-book-copy { min-height: 235px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+}
