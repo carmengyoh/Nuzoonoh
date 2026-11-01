@@ -106,7 +106,13 @@ function setupBookCarousel(allBooks) {
     indicators.append(dot);
     return dot;
   });
-  function show(index) {
+  let transitioning = false;
+  async function show(index) {
+    if (transitioning) return;
+    const direction = index < current ? -1 : 1;
+    const oldParts = [...stage.querySelectorAll(".carousel-cover, .featured-book-copy")];
+    const animate = oldParts.length && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+    transitioning = true;
     current = (index + books.length) % books.length;
     const book = books[current];
     const article = make('article', 'featured-book');
@@ -124,7 +130,13 @@ function setupBookCarousel(allBooks) {
 
     copy.append(link);
     article.append(cover, copy);
+    if (book.cover) await cover.decode().catch(() => {});
+    if (animate) await Promise.all(oldParts.map(part => part.animate([{opacity:1,transform:'translateX(0)'},{opacity:0,transform:'translateX(' + (-direction * 14) + 'px)'}],{duration:160,easing:'ease-in',fill:'forwards'}).finished.catch(()=>{})));
     stage.replaceChildren(article);
+    if (animate) {
+      await Promise.all([cover,copy].map((part,i)=>part.animate([{opacity:0,transform:'translateX(' + (direction * 22) + 'px)'},{opacity:1,transform:'translateX(0)'}],{duration:420,delay:i*35,easing:'cubic-bezier(.2,.7,.2,1)',fill:'both'}).finished.catch(()=>{})));
+    }
+    transitioning = false;
     dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === current)));
   }
   document.querySelector('.carousel-prev').addEventListener('click', () => show(current - 1));

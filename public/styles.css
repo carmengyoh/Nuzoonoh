@@ -773,3 +773,17 @@ body { position: relative; isolation: isolate; }
 
 .keep-together { white-space: nowrap; }
 @media (min-width: 1101px) { .about-copy > p:not(.eyebrow) { font-size: 22px; } }
+
+/* Size the composition to its visible content, centred over the indicators. */
+@media (min-width: 761px) {
+  .book-carousel { width: max-content; max-width: 100%; grid-template-columns: 44px 190px 44px max-content; justify-content: center; }
+  .book-carousel .featured-book-copy { width: max-content; max-width: min(420px, calc(100vw - 440px)); }
+}
+@media (min-width: 1101px) {
+  .book-carousel { grid-template-columns: 44px 240px 44px max-content; }
+  .book-carousel .featured-book-copy { max-width: 480px; }
+}
+@media (min-width: 441px) and (max-width: 760px) {
+  .book-carousel { width: max-content; max-width: 100%; grid-template-columns: 28px 105px 28px max-content; justify-content: center; }
+  .book-carousel .featured-book-copy { width: max-content; max-width: calc(100vw - 265px); }
+}
