@@ -762,3 +762,11 @@ body { position: relative; isolation: isolate; }
   background-size: 180px 180px;
   border-color: #b79a7440;
 }
+
+/* Centre the cover, nearby controls and description as one composition. */
+@media (min-width: 761px) {
+  .book-carousel { max-width: 1120px; width: 100%; margin-inline: auto; padding-inline: 20px; }
+}
+@media (min-width: 441px) and (max-width: 760px) {
+  .book-carousel { max-width: 680px; margin-inline: auto; }
+}

@@ -53,16 +53,16 @@
   ],
   "books": [
     {
-      "id": "sally-mae",
-      "title": "The Turning of Sally-Mae",
-      "cover": "./assets/the-turning-of-sally-mae.png",
-      "description": "An African horror novel by Nuzo Onoh."
-    },
-    {
       "id": "futility",
       "title": "Futility",
       "cover": "./assets/futility-cover.png",
       "description": "Murder. Revenge. Soup."
+    },
+    {
+      "id": "sally-mae",
+      "title": "The Turning of Sally-Mae",
+      "cover": "./assets/the-turning-of-sally-mae.png",
+      "description": "An African horror novel by Nuzo Onoh."
     },
     {
       "id": "dead-brides",
