@@ -770,3 +770,6 @@ body { position: relative; isolation: isolate; }
 @media (min-width: 441px) and (max-width: 760px) {
   .book-carousel { max-width: 680px; margin-inline: auto; }
 }
+
+.keep-together { white-space: nowrap; }
+@media (min-width: 1101px) { .about-copy > p:not(.eyebrow) { font-size: 22px; } }
