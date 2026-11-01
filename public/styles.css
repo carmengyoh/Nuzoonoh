@@ -754,3 +754,11 @@ body { position: relative; isolation: isolate; }
 @media (max-width: 440px) {
   .book-carousel { min-height: 390px; }
 }
+
+/* Matte, lightly grained paper for the review pages. */
+.book-back {
+  background-color: #48291e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.12' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  border-color: #b79a7440;
+}
