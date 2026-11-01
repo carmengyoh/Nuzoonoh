@@ -830,3 +830,5 @@ body { position: relative; isolation: isolate; }
 .world-audio-actions .world-full-audio { display:inline-flex; align-items:center; justify-content:center; min-height:48px; margin:0; padding:14px 24px; border:1px solid var(--world-accent); background:var(--world-accent); color:var(--world-bg); text-decoration:none; text-transform:uppercase; font-size:12px; }
 .world-audio-actions .world-full-audio[hidden] { display:none; }
 .world-excerpt { white-space:pre-line; }
+
+.world-summary-copy { white-space: pre-line; }
