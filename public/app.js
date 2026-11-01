@@ -280,6 +280,7 @@ function openBookWorld(id, trigger) {
   cover.src = world.cover; cover.alt = world.title + ' book cover';
   worldDialog.querySelector('#world-title').textContent = world.title;
   worldDialog.querySelector('.world-subtitle').textContent = world.subtitle;
+  worldDialog.querySelector('.world-publication').textContent = world.publication || ''; 
   worldDialog.querySelector('.world-summary-copy').textContent = world.summary || 'Story summary coming soon.';
   worldDialog.querySelector('.world-excerpt').textContent = world.excerpt || '';
   worldDialog.querySelector('.world-audio-status').hidden = Boolean(world.audio);

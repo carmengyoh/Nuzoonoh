@@ -236,7 +236,8 @@
           "quote": "A fiercely original, snake-infused, page-turner",
           "reviewer": "Tamika Thompson"
         }
-      ]
+      ],
+      "publication": "Published 20th October 2026 (Titan Books)"
     },
     "futility": {
       "title": "Futility",
@@ -254,7 +255,8 @@
       "audioStart": 549,
       "listeningTitle": "“With another loud curse,”",
       "audiobookUrl": "https://www.audible.co.uk/pd/Futility-Audiobook/B0FSGWP3X1",
-      "audioCredit": "Narrated by Délé Ogundiran"
+      "audioCredit": "Narrated by Délé Ogundiran",
+      "publication": "Published 14th October 2025 (Titan Books)"
     },
     "dead-brides": {
       "title": "Where the Dead Brides Gather",
@@ -268,7 +270,8 @@
       "excerpt": "",
       "audio": "",
       "summary": "Young Bata finds herself protecting her cousin from a murderous ghost on the eve of a wedding. An attempted exorcism sends her into Ibaja-La, a realm inhabited by brides who died before they could marry. Returning with new powers, she must learn to confront its dangerous spirits and protect the people she loves.",
-      "summarySource": "https://www.penguinrandomhouse.com/books/763863/where-the-dead-brides-gather-by-nuzo-onoh/"
+      "summarySource": "https://www.penguinrandomhouse.com/books/763863/where-the-dead-brides-gather-by-nuzo-onoh/",
+      "publication": "Published 22nd October 2024 (Titan Books)"
     },
     "unclean": {
       "title": "The Unclean",
@@ -282,7 +285,8 @@
       "quote": "",
       "reviewer": "",
       "audio": "",
-      "excerpt": ""
+      "excerpt": "",
+      "publication": "Published 31st October 2020 (Canaan-Star Publishing)"
     },
     "sleepless": {
       "title": "The Sleepless",
@@ -296,7 +300,8 @@
       "quote": "",
       "reviewer": "",
       "audio": "",
-      "excerpt": ""
+      "excerpt": "",
+      "publication": "Published 28th June 2016 (Canaan-Star Publishing)"
     }
   },
   "newsFeed": {
