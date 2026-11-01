@@ -37,13 +37,12 @@ function renderBook(book, index) {
   return item;
 }
 
-function renderNews(story) {
-  const item = make("article", "news-item");
-  item.append(make("div", `news-image news-image-${story.kind || "default"}`, ""));
-  const copy = make("div", "news-copy");
-  copy.append(make("h3", "", story.title), make("p", "", story.source));
-  item.append(copy, make("span", "news-arrow", "→"));
-  return item;
+function renderNews(story,index) {
+  const item=make('article','news-item'+(index===0?' news-lead':''));
+  if(index===0){const image=make('img','news-lead-image');image.src=story.image||'./assets/the-turning-of-sally-mae.png';image.alt=story.imageAlt||'The Turning of Sally-Mae book cover';image.loading='lazy';item.append(image);}
+  const copy=make('div','news-copy');copy.append(make('p','eyebrow',story.source));
+  const heading=make('h3');const link=make('a','',story.title);link.href=story.url;link.target='_blank';link.rel='noopener noreferrer';heading.append(link);copy.append(heading);
+  const date=make('time','news-date',new Date(story.published).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}));date.dateTime=story.published;copy.append(date);item.append(copy);return item;
 }
 
 async function loadContent() {
@@ -60,7 +59,12 @@ async function loadContent() {
     });
 
     setupBookCarousel(content.books);
-    renderList('[data-list="news"]', content.news, renderNews);
+    const newsGrid=document.querySelector('[data-list="news"]');
+    const news=content.news||[];
+    function showNews(all=false){newsGrid.replaceChildren();(all?news:news.slice(0,3)).forEach((story,index)=>newsGrid.append(renderNews(story,index)));}
+    showNews();
+    const allNews=document.querySelector('.news-view-all');allNews.hidden=news.length<=3;
+    allNews.addEventListener('click',()=>{const all=allNews.getAttribute('aria-expanded')!=='true';allNews.setAttribute('aria-expanded',String(all));allNews.firstChild.textContent=all?'Show less news ':'View all news ';showNews(all);});
   } catch (error) {
     document.querySelector("main").classList.add("content-unavailable");
     console.error(error);

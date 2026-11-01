@@ -787,3 +787,32 @@ body { position: relative; isolation: isolate; }
   .book-carousel { width: max-content; max-width: 100%; grid-template-columns: 28px 105px 28px max-content; justify-content: center; }
   .book-carousel .featured-book-copy { width: max-content; max-width: calc(100vw - 265px); }
 }
+
+/* Latest News: one illustrated lead story and a quieter stack of headlines. */
+.news { padding: 30px 0 24px; }
+.latest-news-heading { display:flex; align-items:center; gap:24px; margin-bottom:28px; }
+.latest-news-heading::before,.latest-news-heading::after { content:''; height:1px; background:var(--rule); flex:1; }
+.latest-news-heading h2 { margin:0; font-size:22px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; }
+.news .news-grid { display:grid; grid-template-columns:1.3fr 1fr; gap:0 32px; }
+.news .news-item { display:block; padding:18px 0; border:0; min-height:0; }
+.news .news-item + .news-item { border-bottom:1px solid var(--rule); padding-left:24px; border-left:1px solid var(--rule); }
+.news .news-lead { grid-row:span 2; display:grid; grid-template-columns:minmax(130px,.85fr) minmax(0,1.15fr); align-items:start; gap:24px; padding:0; }
+.news-lead-image { width:100%; height:250px; object-fit:contain; object-position:center top; }
+.news .news-copy .eyebrow { font-size:9px; margin-bottom:8px; line-height:1.5; }
+.news .news-copy h3 { font-size:21px; line-height:1.25; margin-bottom:12px; }
+.news .news-lead h3 { font-size:27px; }
+.news-copy h3 a:hover { color:var(--red); }
+.news-date { color:#79746a; font-size:13px; font-style:italic; }
+.news-view-all { display:flex; width:max-content; margin:22px 0 0 auto; padding:8px 0; border:0; background:none; cursor:pointer; color:var(--red); }
+.news-view-all[hidden] { display:none; }
+.carousel-indicators { margin-top:48px; margin-bottom:14px; }
+@media (max-width:760px) {
+ .latest-news-heading h2 { font-size:18px; }
+ .news .news-grid { grid-template-columns:1fr; }
+ .news .news-lead { grid-row:auto; grid-template-columns:minmax(100px,.75fr) minmax(0,1.25fr); gap:20px; padding-bottom:24px; }
+ .news-lead-image { height:200px; }
+ .news .news-item + .news-item { border-left:0; padding:20px 0; }
+ .news .news-lead h3 { font-size:23px; }
+ .news .news-copy h3 { font-size:20px; }
+ .carousel-indicators { margin-top:42px; margin-bottom:12px; }
+}

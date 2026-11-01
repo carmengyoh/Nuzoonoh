@@ -87,19 +87,100 @@
   ],
   "news": [
     {
-      "title": "News headline placeholder",
-      "source": "Publication · Date",
-      "kind": "portrait"
+      "title": "\"The Turning of Sally-Mae\" Mixes African Occult Horror With a Wild West Revenge Tale",
+      "source": "RUE MORGUE",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNU01YSFdNd1g1cUdjV2RjbEdiazhuOGJZeWhKTTluNWt0WFYxNEYwdE5BOVVRemhjWm1ZbTA3eWhibVU5Tl9OeVdyT2Qwb1FsWlRjX2xtY0wxUWNJc1hsdzJoZWxfcDhxOFMxRERsZEU1cldfT1VBOXNFYVNuM2RnNFRHRkNTXzNJNHR1MmNVaVFxWnhTeGc5cEtCNk55cXVKNFk0Y3N2ajluZw?oc=5",
+      "published": "2026-10-22T07:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
     },
     {
-      "title": "Book news placeholder",
-      "source": "Publisher · Date",
-      "kind": "books"
+      "title": "The Turning of Sally Mae by Nuzo Onoh review",
+      "source": "Bloody Flicks",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVUZaY2V2b0VEaG9Bb0FOVmtGdkFUb2J4WFdHX2d1eHRnYWo1U21nd1d6YmJyRzR3MTZpUk5HM0VhWGhuZUplY3MyTFNac19JMTZxel9RNXNXRENiMmdTU0V0QXUtbVdhbko3TE02M2tlOXJ4cVZaaktvbVJTeXQ5ZFU1OWNTSW15VGpNQg?oc=5",
+      "published": "2026-10-20T17:31:31.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
     },
     {
-      "title": "Event news placeholder",
-      "source": "Venue · Date",
-      "kind": "mic"
+      "title": "Nuzo Onoh releases ‘Futility’, second novel in two months",
+      "source": "Businessday NG",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOR0xseG8zZXFVbTVUMEJObC1VR1NRVGdtY1NMNnM5NTFXWUo5cE1fQTB2eFh6NGZOREpyd3NQNEliSnZ3N2VDMzBmLWhxNmY4WjV1c3J1Ri1nNDJDSzhTaGlsRFdXbTA0RjlMRHU1VlphSmR6V1ctR1otejkwWWZSR0Vya19nZkRTckx3X1RTMXNYWjZCVVZzd3JfMnXSAaIBQVVfeXFMUDdUOFdfS1hsdUdwT2k2dExXdHNuOHlIY0poUFR6dWFaeldlem1lV0xVLWxpMDZMeVY3ZDZsZGN1S3VIV3VZREg3bHdQSDFMQWhjZGx4RWpkVmN6VFp3bkhCaVFhRnYyOU5IOHAtUk9vTHk2Vmp2ZEJ2ajE3RjBBQ0s1Q0FqN1E3OWlEclZOa1VuUmhiajZfQzRDaGtSa1h5QzR3?oc=5",
+      "published": "2026-10-09T11:27:19.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "The Turning of Sally-Mae by Nuzo Onoh",
+      "source": "Publishers Weekly",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8yaU5jaGRCYThRX3RTdEJZN1VZRnFTd0c3Z1Z3Uk10WFNJallqdVNrUGVYcjJqTTNVa2lmcG1WRlVPSDlnU1B5UzR0WS0wZldaZ2xHa21QejA?oc=5",
+      "published": "2026-08-09T20:56:32.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "Horror Legend Nuzo Onoh Reveals Cover for New Novel 'The Turning of Sally-Mae' [Exclusive]",
+      "source": "Bloody Disgusting",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOejQzcXpBbDZ4WFYzOEtRWjktRk85QWU1RE1iUk5haXdGWkljdWNzeFJ5NWZzN0dWQW5Oa0dfN2pOeWE2Xy1MamdsT0xkNzV6UUUwcWtwa21Vc1ItXzBsX24xWmsxOEpDQldoWlZxLUhpenl6cFZzRUlHQnRzaTU5RnB1QWotM0pfZEd2Z2ExdEZuaDZNSVNLSTNZUXdMMlc5bFRGRXJpWGN3aVA1UnI0LURNRExLNUxqM1lLT1N6V2hfTnB6cXNPSjVmWWgwRUtyM1E?oc=5",
+      "published": "2026-03-11T07:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "REVIEW: Futility by Nuzo Onoh",
+      "source": "Grimdark Magazine",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5DM3p3Zl9BajhxSTRmMkk3MW1qZ2xWZXhfYlFqTUFCMHU2U0ttU1U5Z1dmczZ4ellrdGwtQkw4YzNyT0dxMU5LUHRNSS05X1kwdWt6d2hSd3RCTHJKZHZVVU0yS3VZTldWakNWaTZzNA?oc=5",
+      "published": "2025-10-23T07:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "Q&A: Nuzo Onoh, Author of ‘Futility’",
+      "source": "The Nerd Daily",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE04Q0NJY1RSZURLNk1jSjlxSk1YcjAzVnQ0UG9tcHA5VEEyN2xoU05zbnFkVW9ZMFo3ZTZDQ1ktdldDYnNpZUZqdi1DWXRiNE1jMS02RU9ZTEIxRVFBZ1c1WS01dGlTUlZBN3VXdFdR?oc=5",
+      "published": "2025-10-21T07:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "Interview: Horror author Nuzo Onoh talks about her latest novel Futility",
+      "source": "1428 Elm",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbXRKbm5OMDRMbGRnVjByRFZpLWQ2Z0RLWnRXLUFjWmttMnNzdWRhckVReFhEZFV5bm5OTURIYlJpN3ZzMXlpeTZXU2FCT3U3alZVMUlPcHpQcDZBU2VsdVFwZU0yNHNlbHRUWUlsd2VRU0RlZ2FyMFNkNUhGMUlMaHY2Rm1HcFB1dndJOVRxcUFZNzJ4dmc?oc=5",
+      "published": "2025-10-21T07:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "[Special Guest Article] Nuzo Onoh Reveals the Secret of \"HOW TO MAKE A GOD\"",
+      "source": "Daily Dead",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZ2VkNEYzYTAxSXF6UzQxS2J2WFVubE12clc1WVNTUGlFQkJOcHFsaXlxSDRRS1VPeDZiRk1zMWNfbktiX29vQXpMakVpaFdROFI1cDZRUUFTeDRCdHhKemZDNE9fZVBzeWk1NWR0N3pidzU0NzBRLXJTVWxDUi1TX3QxSGxoRFRsdGZPS1hWZw?oc=5",
+      "published": "2025-10-21T07:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "Exclusive Cover Reveal for Nuzo Onoh's THE FAKE GHOST, Available This August From Dead Sky Publishing",
+      "source": "Daily Dead",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ3J5djhiekdlUS1tUnBkZXR2RGZLWVdtYW5vZTEtOV9iUEdBRThfRlFPalM0SGhxVkhwNmhaWWxVM04tVTV4SjFEMXo3eUVheXJkdk8wSVd1djltYkZvTkVYZzllSHpGbkdJaWlueGRVZFdPVVZ1Nnh3NldYWjhXaHFxZDlWOG9pVDZobVhFQks0akgxX3V0Uk9hT2FERkcxdVVraEd4aHR1a1lpN2t2ZUFLdy05OU9wc3hkNUVRUQ?oc=5",
+      "published": "2025-03-24T07:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "The Sleepless: Nuzo Onoh’s trail of African horror path",
+      "source": "Businessday NG",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNeGhnMWd3OVFMN1lRdkJIdEN6ZS1DZG15eDJMNl94TTdSdVVjLUZkMGpBSG9pSW1zOVl5OXNVUGlhckF2dkJGQ25ESnMteEJsbGNIVTVRdmhrX0U4ZWhvdHBfbl93czZ5bkhRN2tjdXpWZjJ0ZUZoaUVSeWxzMjFiQTRLMkZYZmJCaEJWYVJ5WTNUVDdPbDJGRFBVa9IBoAFBVV95cUxQbjZDVVZJOHBmR3RZSGw4QTRVV2NoM0R5VVZCTTNvd2ZTaTF3M3pCX3RwM0ZUXzNUSWowRWVQVWduUDZMM05tb1hvNHE0YXprOWUwWENSY0tuVVFxaEowNXlpRURpTk1xWTBuME90V0JwZThhMGhNa0pzN2IxdkVPMVhvSHBYZEM3cGpBM3RuUXJ3VkplM3lSLVBFNUtGOVg0?oc=5",
+      "published": "2025-03-02T08:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
+    },
+    {
+      "title": "FUTILITY: Exclusive Cover Reveal And Excerpt Of Nuzo Onoh’s Bloody African Horror Novel",
+      "source": "Fangoria",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5KZFBXTnpsQ1drYW14NTJ3NFRkNGxFUVE5UEd5ZWdfT2ZzejZhWkJOdE5IUl81WnFrSFo4cUlZRzFwY2dCTVRaRkxKVU9wVTlwSVBBQmF5OFBLYXZsTXppbnBYLWNTMTh1MTBVOS1B?oc=5",
+      "published": "2025-02-24T08:00:00.000Z",
+      "image": "./assets/the-turning-of-sally-mae.png",
+      "imageAlt": "The Turning of Sally-Mae book cover"
     }
   ],
   "recognition": {
@@ -213,5 +294,10 @@
       "audio": "",
       "excerpt": ""
     }
+  },
+  "newsFeed": {
+    "source": "Google News",
+    "url": "https://news.google.com/rss/search?q=%22Nuzo%20Onoh%22&hl=en-GB&gl=GB&ceid=GB%3Aen",
+    "updatedAt": "2026-11-01T16:48:04.918Z"
   }
 }
